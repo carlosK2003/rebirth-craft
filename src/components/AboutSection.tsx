@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import aboutImg from "@/assets/about-wood.jpg";
+import aboutImg from "@/assets/about-wood.webp";
 import { Shield, Leaf, Award } from "lucide-react";
 
 const features = [

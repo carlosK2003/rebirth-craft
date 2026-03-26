@@ -2,11 +2,11 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import pisosImg from "@/assets/product-pisos.jpg";
-import decksImg from "@/assets/product-decks.jpg";
+import pisosImg from "@/assets/product-pisos.webp";
+import decksImg from "@/assets/product-decks.webp";
 import forrosImg from "@/assets/product-forros.jpg";
-import s4sImg from "@/assets/product-s4s.jpg";
-import escadasImg from "@/assets/product-escadas.jpg";
+import s4sImg from "@/assets/product-s4s.webp";
+import escadasImg from "@/assets/product-escadas.webp";
 
 const products = [
   { title: "Pisos & Assoalhos", description: "Pisos maciços e engenheirados em madeiras nobres nacionais e importadas para ambientes sofisticados.", image: pisosImg, alt: "Piso de madeira nobre brasileira", link: "/pisos-e-assoalhos", cta: "Ver detalhes" },
