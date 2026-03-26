@@ -1,6 +1,9 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import aboutImg from "@/assets/about-wood.webp";
+import aboutMobile1 from "@/assets/about-mobile-1.webp";
+import aboutMobile2 from "@/assets/about-mobile-2.webp";
+import aboutMobile3 from "@/assets/about-mobile-3.webp";
 import { Shield, Leaf, Award } from "lucide-react";
 
 const features = [
@@ -8,6 +11,8 @@ const features = [
   { icon: Leaf, title: "Sustentabilidade", desc: "Compromisso com o manejo florestal responsável e a preservação ambiental." },
   { icon: Award, title: "Qualidade Premium", desc: "Rigoroso controle de qualidade em cada peça, do corte ao acabamento final." },
 ];
+
+const mobileImages = [aboutMobile1, aboutMobile2, aboutMobile3];
 
 const AboutSection = () => {
   const ref = useRef(null);
@@ -34,7 +39,28 @@ const AboutSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-16 max-w-4xl mx-auto"
         >
-          <img src={aboutImg} alt="Textura de madeira nobre brasileira" className="w-full h-[400px] lg:h-[500px] object-cover rounded-sm" loading="lazy" />
+          {/* Desktop/Tablet: static image */}
+          <img
+            src={aboutImg}
+            alt="Textura de madeira nobre brasileira"
+            className="hidden md:block w-full h-[400px] lg:h-[500px] object-cover rounded-sm"
+            loading="lazy"
+          />
+
+          {/* Mobile: marquee */}
+          <div className="md:hidden overflow-hidden rounded-sm h-[350px]">
+            <div className="flex animate-marquee-about h-full w-max">
+              {[...mobileImages, ...mobileImages].map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt={`Equipe BMN ${(i % 3) + 1}`}
+                  className="h-full w-[280px] object-cover flex-shrink-0"
+                  loading="lazy"
+                />
+              ))}
+            </div>
+          </div>
         </motion.div>
 
         <motion.div
