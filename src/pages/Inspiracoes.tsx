@@ -31,20 +31,18 @@ import h5 from "@/assets/insp-hotel-5.webp";
 import h6 from "@/assets/insp-hotel-6.webp";
 import h7 from "@/assets/insp-hotel-7.webp";
 
-import p1 from "@/assets/insp-premiado-1.jpg";
-import p2 from "@/assets/insp-premiado-2.jpg";
-import p3 from "@/assets/insp-premiado-3.jpg";
-import p4 from "@/assets/insp-premiado-4.jpg";
-import p5 from "@/assets/insp-premiado-5.jpg";
-import p6 from "@/assets/insp-premiado-6.jpg";
-import p7 from "@/assets/insp-premiado-7.jpg";
-import p8 from "@/assets/insp-premiado-8.jpg";
+import p1 from "@/assets/insp-premiado-1.webp";
+import p2 from "@/assets/insp-premiado-2.webp";
+import p3 from "@/assets/insp-premiado-3.webp";
+import p4 from "@/assets/insp-premiado-4.webp";
+import p5 from "@/assets/insp-premiado-5.webp";
+import p6 from "@/assets/insp-premiado-6.webp";
 
 const sections = [
   { title: "Área Residencial", subtitle: "Ambientes que acolhem com elegância e calor natural.", images: [r1, r2, r3, r4, r5, r6, r7, r8] },
   { title: "Área Comercial", subtitle: "Espaços corporativos que impressionam e inspiram confiança.", images: [c1, c2, c3, c4, c5, c6, c7, c8] },
   { title: "Hotéis", subtitle: "Hospitalidade elevada pela nobreza da madeira.", images: [h1, h2, h3, h4, h5, h6, h7] },
-  { title: "Ambientes Premiados", subtitle: "Projetos de alto padrão reconhecidos pela excelência em design.", images: [p1, p2, p3, p4, p5, p6, p7, p8] },
+  { title: "Ambientes Premiados", subtitle: "Projetos de alto padrão reconhecidos pela excelência em design.", images: [p1, p2, p3, p4, p5, p6] },
 ];
 
 const InspSection = ({ title, subtitle, images, index }: { title: string; subtitle: string; images: string[]; index: number }) => {
