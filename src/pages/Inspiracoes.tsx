@@ -14,14 +14,16 @@ import r6 from "@/assets/insp-residencial-6.jpg";
 import r7 from "@/assets/insp-residencial-7.jpg";
 import r8 from "@/assets/insp-residencial-8.jpg";
 
-import c1 from "@/assets/insp-comercial-1.jpg";
-import c2 from "@/assets/insp-comercial-2.jpg";
-import c3 from "@/assets/insp-comercial-3.jpg";
-import c4 from "@/assets/insp-comercial-4.jpg";
-import c5 from "@/assets/insp-comercial-5.jpg";
-import c6 from "@/assets/insp-comercial-6.jpg";
-import c7 from "@/assets/insp-comercial-7.jpg";
-import c8 from "@/assets/insp-comercial-8.jpg";
+import c1 from "@/assets/insp-comercial-1.webp";
+import c2 from "@/assets/insp-comercial-2.webp";
+import c3 from "@/assets/insp-comercial-3.webp";
+import c4 from "@/assets/insp-comercial-4.webp";
+import c5 from "@/assets/insp-comercial-5.webp";
+import c6 from "@/assets/insp-comercial-6.webp";
+import c7 from "@/assets/insp-comercial-7.webp";
+import c8 from "@/assets/insp-comercial-8.webp";
+import c9 from "@/assets/insp-comercial-9.webp";
+import c10 from "@/assets/insp-comercial-10.webp";
 
 import h1 from "@/assets/insp-hotel-1.webp";
 import h2 from "@/assets/insp-hotel-2.webp";
