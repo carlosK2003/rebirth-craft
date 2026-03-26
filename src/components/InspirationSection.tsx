@@ -1,15 +1,15 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import img1 from "@/assets/inspiration-1.jpg";
-import img2 from "@/assets/inspiration-2.jpg";
+import img1 from "@/assets/inspiration-1.webp";
+import img2 from "@/assets/inspiration-2.webp";
 import img3 from "@/assets/inspiration-3.jpg";
-import img4 from "@/assets/inspiration-4.jpg";
-import img5 from "@/assets/inspiration-5.jpg";
+import img4 from "@/assets/inspiration-4.webp";
+import img5 from "@/assets/inspiration-5.webp";
 
 const images = [
   { src: img1, alt: "Área comercial com piso e forro de madeira nobre BMN", label: "Área Comercial" },
-  { src: img2, alt: "Quarto com piso e painel de madeira", label: "Quarto" },
+  { src: img2, alt: "Área residencial com piso de madeira", label: "Área Residencial" },
   { src: img3, alt: "Área residencial com deck e forro de madeira nobre", label: "Área Residencial" },
   { src: img4, alt: "Cozinha moderna com piso de madeira", label: "Cozinha" },
   { src: img5, alt: "Área residencial com pergolado e piscina", label: "Área Residencial" },
