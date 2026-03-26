@@ -31,14 +31,12 @@ import h5 from "@/assets/insp-hotel-5.webp";
 import h6 from "@/assets/insp-hotel-6.webp";
 import h7 from "@/assets/insp-hotel-7.webp";
 
-import p1 from "@/assets/insp-premiado-1.jpg";
-import p2 from "@/assets/insp-premiado-2.jpg";
-import p3 from "@/assets/insp-premiado-3.jpg";
-import p4 from "@/assets/insp-premiado-4.jpg";
-import p5 from "@/assets/insp-premiado-5.jpg";
-import p6 from "@/assets/insp-premiado-6.jpg";
-import p7 from "@/assets/insp-premiado-7.jpg";
-import p8 from "@/assets/insp-premiado-8.jpg";
+import p1 from "@/assets/insp-premiado-1.webp";
+import p2 from "@/assets/insp-premiado-2.webp";
+import p3 from "@/assets/insp-premiado-3.webp";
+import p4 from "@/assets/insp-premiado-4.webp";
+import p5 from "@/assets/insp-premiado-5.webp";
+import p6 from "@/assets/insp-premiado-6.webp";
 
 const sections = [
   { title: "Área Residencial", subtitle: "Ambientes que acolhem com elegância e calor natural.", images: [r1, r2, r3, r4, r5, r6, r7, r8] },
