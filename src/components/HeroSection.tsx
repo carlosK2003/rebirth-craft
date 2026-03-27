@@ -1,21 +1,49 @@
 import { motion } from "framer-motion";
-import heroBg from "@/assets/hero-bg.webp";
+import { useState, useEffect, useCallback } from "react";
 import logoBmn from "@/assets/logo-bmn.png";
+import slide1 from "@/assets/hero-slide-1.webp";
+import slide2 from "@/assets/hero-slide-2.webp";
+import slide3 from "@/assets/hero-slide-3.webp";
+import slide4 from "@/assets/hero-slide-4.webp";
+import slide5 from "@/assets/hero-slide-5.webp";
+import slide6 from "@/assets/hero-slide-6.webp";
+import slide7 from "@/assets/hero-slide-7.webp";
+import slide8 from "@/assets/hero-slide-8.webp";
+import slide9 from "@/assets/hero-slide-9.webp";
+import slide10 from "@/assets/hero-slide-10.webp";
+
+const slides = [slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10];
 
 const HeroSection = () => {
+  const [current, setCurrent] = useState(0);
+
+  const next = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % slides.length);
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(next, 4000);
+    return () => clearInterval(timer);
+  }, [next]);
+
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Slideshow background with crossfade */}
       <div className="absolute inset-0">
-        <img
-          src={heroBg}
-          alt="Deck de madeira nobre em ambiente luxuoso"
-          className="w-full h-full object-cover"
-          loading="eager"
-        />
+        {slides.map((src, i) => (
+          <img
+            key={i}
+            src={src}
+            alt={`BMN ambiente ${i + 1}`}
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out"
+            style={{ opacity: i === current ? 1 : 0 }}
+            loading={i === 0 ? "eager" : "lazy"}
+          />
+        ))}
         <div className="absolute inset-0 bg-gradient-to-b from-wood-dark/70 via-wood-dark/50 to-wood-dark/80" />
       </div>
 
