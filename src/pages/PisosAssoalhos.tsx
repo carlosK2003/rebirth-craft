@@ -13,14 +13,16 @@ import macicoSucupira from "@/assets/piso-macico-sucupira.jpg";
 import macicoTauari from "@/assets/piso-macico-tauari.jpg";
 import engCarvalhoPrime from "@/assets/piso-eng-carvalho-prime.jpg";
 import engTauariPrime from "@/assets/piso-eng-tauari-prime.jpg";
-import projeto1 from "@/assets/projeto-1.jpg";
-import projeto2 from "@/assets/projeto-2.jpg";
-import projeto3 from "@/assets/projeto-3.jpg";
-import projeto4 from "@/assets/projeto-4.jpg";
-import projeto5 from "@/assets/projeto-5.jpg";
-import projeto6 from "@/assets/projeto-6.jpg";
-import projeto7 from "@/assets/projeto-7.jpg";
-import projeto8 from "@/assets/projeto-8.jpg";
+import projeto1 from "@/assets/piso-projeto-1.webp";
+import projeto2 from "@/assets/piso-projeto-2.webp";
+import projeto3 from "@/assets/piso-projeto-3.webp";
+import projeto4 from "@/assets/piso-projeto-4.webp";
+import projeto5 from "@/assets/piso-projeto-5.webp";
+import projeto6 from "@/assets/piso-projeto-6.webp";
+import projeto7 from "@/assets/piso-projeto-7.webp";
+import projeto8 from "@/assets/piso-projeto-8.webp";
+import projeto9 from "@/assets/piso-projeto-9.webp";
+import projeto10 from "@/assets/piso-projeto-10.webp";
 
 const pisosMacicos = [
   { name: "Cumaru Champagne", image: macicoCumaruChampagne, desc: "Tonalidade dourada clara com veios suaves. Resistência excepcional e beleza luminosa." },
