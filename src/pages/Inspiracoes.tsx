@@ -5,14 +5,16 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Marquee } from "@/components/ProductCarousel";
 
-import r1 from "@/assets/insp-residencial-1.jpg";
-import r2 from "@/assets/insp-residencial-2.jpg";
-import r3 from "@/assets/insp-residencial-3.jpg";
-import r4 from "@/assets/insp-residencial-4.jpg";
-import r5 from "@/assets/insp-residencial-5.jpg";
-import r6 from "@/assets/insp-residencial-6.jpg";
-import r7 from "@/assets/insp-residencial-7.jpg";
-import r8 from "@/assets/insp-residencial-8.jpg";
+import r1 from "@/assets/insp-residencial-1.webp";
+import r2 from "@/assets/insp-residencial-2.webp";
+import r3 from "@/assets/insp-residencial-3.webp";
+import r4 from "@/assets/insp-residencial-4.webp";
+import r5 from "@/assets/insp-residencial-5.webp";
+import r6 from "@/assets/insp-residencial-6.webp";
+import r7 from "@/assets/insp-residencial-7.webp";
+import r8 from "@/assets/insp-residencial-8.webp";
+import r9 from "@/assets/insp-residencial-9.webp";
+import r10 from "@/assets/insp-residencial-10.webp";
 
 import c1 from "@/assets/insp-comercial-1.webp";
 import c2 from "@/assets/insp-comercial-2.webp";
