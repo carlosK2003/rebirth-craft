@@ -5,16 +5,18 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Marquee } from "@/components/ProductCarousel";
 
-import ep1 from "@/assets/escada-projeto-1.jpg";
-import ep2 from "@/assets/escada-projeto-2.jpg";
-import ep3 from "@/assets/escada-projeto-3.jpg";
-import ep4 from "@/assets/escada-projeto-4.jpg";
-import ep5 from "@/assets/escada-projeto-5.jpg";
-import ep6 from "@/assets/escada-projeto-6.jpg";
-import ep7 from "@/assets/escada-projeto-7.jpg";
-import ep8 from "@/assets/escada-projeto-8.jpg";
+import ep1 from "@/assets/escada-1.webp";
+import ep2 from "@/assets/escada-2.webp";
+import ep3 from "@/assets/escada-3.webp";
+import ep4 from "@/assets/escada-4.webp";
+import ep5 from "@/assets/escada-5.webp";
+import ep6 from "@/assets/escada-6.webp";
+import ep7 from "@/assets/escada-7.webp";
+import ep8 from "@/assets/escada-8.webp";
+import ep9 from "@/assets/escada-9.webp";
+import ep10 from "@/assets/escada-10.webp";
 
-const projetos = [ep1, ep2, ep3, ep4, ep5, ep6, ep7, ep8];
+const projetos = [ep1, ep2, ep3, ep4, ep5, ep6, ep7, ep8, ep9, ep10];
 
 const Escadas = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
