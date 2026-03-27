@@ -43,7 +43,7 @@ import p5 from "@/assets/insp-premiado-5.webp";
 import p6 from "@/assets/insp-premiado-6.webp";
 
 const sections = [
-  { title: "Área Residencial", subtitle: "Ambientes que acolhem com elegância e calor natural.", images: [r1, r2, r3, r4, r5, r6, r7, r8] },
+  { title: "Área Residencial", subtitle: "Ambientes que acolhem com elegância e calor natural.", images: [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10] },
   { title: "Área Comercial", subtitle: "Espaços corporativos que impressionam e inspiram confiança.", images: [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10] },
   { title: "Hotéis", subtitle: "Hospitalidade elevada pela nobreza da madeira.", images: [h1, h2, h3, h4, h5, h6, h7] },
   { title: "Ambientes Premiados", subtitle: "Projetos de alto padrão reconhecidos pela excelência em design.", images: [p1, p2, p3, p4, p5, p6] },
