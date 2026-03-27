@@ -7,21 +7,23 @@ import { ProductCarousel, Marquee } from "@/components/ProductCarousel";
 
 import forroTauari from "@/assets/forro-tauari.jpg";
 import forroCumaru from "@/assets/forro-cumaru.jpg";
-import fp1 from "@/assets/forro-projeto-1.jpg";
-import fp2 from "@/assets/forro-projeto-2.jpg";
-import fp3 from "@/assets/forro-projeto-3.jpg";
-import fp4 from "@/assets/forro-projeto-4.jpg";
-import fp5 from "@/assets/forro-projeto-5.jpg";
-import fp6 from "@/assets/forro-projeto-6.jpg";
-import fp7 from "@/assets/forro-projeto-7.jpg";
-import fp8 from "@/assets/forro-projeto-8.jpg";
+import fp1 from "@/assets/forro-projeto-1.webp";
+import fp2 from "@/assets/forro-projeto-2.webp";
+import fp3 from "@/assets/forro-projeto-3.webp";
+import fp4 from "@/assets/forro-projeto-4.webp";
+import fp5 from "@/assets/forro-projeto-5.webp";
+import fp6 from "@/assets/forro-projeto-6.webp";
+import fp7 from "@/assets/forro-projeto-7.webp";
+import fp8 from "@/assets/forro-projeto-8.webp";
+import fp9 from "@/assets/forro-projeto-9.webp";
+import fp10 from "@/assets/forro-projeto-10.webp";
 
 const forroSpecies = [
   { name: "Tauari", image: forroTauari, desc: "Cor clara e uniforme, conforto térmico e acústico. Ideal para forros internos." },
   { name: "Cumaru", image: forroCumaru, desc: "Tonalidade dourada quente com veios marcantes. Design sofisticado e acolhedor." },
 ];
 
-const projetos = [fp1, fp2, fp3, fp4, fp5, fp6, fp7, fp8];
+const projetos = [fp1, fp2, fp3, fp4, fp5, fp6, fp7, fp8, fp9, fp10];
 
 const Forros = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
