@@ -5,14 +5,16 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Marquee } from "@/components/ProductCarousel";
 
-import r1 from "@/assets/insp-residencial-1.jpg";
-import r2 from "@/assets/insp-residencial-2.jpg";
-import r3 from "@/assets/insp-residencial-3.jpg";
-import r4 from "@/assets/insp-residencial-4.jpg";
-import r5 from "@/assets/insp-residencial-5.jpg";
-import r6 from "@/assets/insp-residencial-6.jpg";
-import r7 from "@/assets/insp-residencial-7.jpg";
-import r8 from "@/assets/insp-residencial-8.jpg";
+import r1 from "@/assets/insp-residencial-1.webp";
+import r2 from "@/assets/insp-residencial-2.webp";
+import r3 from "@/assets/insp-residencial-3.webp";
+import r4 from "@/assets/insp-residencial-4.webp";
+import r5 from "@/assets/insp-residencial-5.webp";
+import r6 from "@/assets/insp-residencial-6.webp";
+import r7 from "@/assets/insp-residencial-7.webp";
+import r8 from "@/assets/insp-residencial-8.webp";
+import r9 from "@/assets/insp-residencial-9.webp";
+import r10 from "@/assets/insp-residencial-10.webp";
 
 import c1 from "@/assets/insp-comercial-1.webp";
 import c2 from "@/assets/insp-comercial-2.webp";
@@ -41,7 +43,7 @@ import p5 from "@/assets/insp-premiado-5.webp";
 import p6 from "@/assets/insp-premiado-6.webp";
 
 const sections = [
-  { title: "Área Residencial", subtitle: "Ambientes que acolhem com elegância e calor natural.", images: [r1, r2, r3, r4, r5, r6, r7, r8] },
+  { title: "Área Residencial", subtitle: "Ambientes que acolhem com elegância e calor natural.", images: [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10] },
   { title: "Área Comercial", subtitle: "Espaços corporativos que impressionam e inspiram confiança.", images: [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10] },
   { title: "Hotéis", subtitle: "Hospitalidade elevada pela nobreza da madeira.", images: [h1, h2, h3, h4, h5, h6, h7] },
   { title: "Ambientes Premiados", subtitle: "Projetos de alto padrão reconhecidos pela excelência em design.", images: [p1, p2, p3, p4, p5, p6] },
