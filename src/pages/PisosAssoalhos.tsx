@@ -38,7 +38,7 @@ const pisosEngenheirados = [
   { name: "Tauari Prime", image: engTauariPrime, desc: "Leveza e sofisticação em base engenheirada de alta estabilidade." },
 ];
 
-const projetos = [projeto1, projeto2, projeto3, projeto4, projeto5, projeto6, projeto7, projeto8];
+const projetos = [projeto1, projeto2, projeto3, projeto4, projeto5, projeto6, projeto7, projeto8, projeto9, projeto10];
 
 const PisosAssoalhos = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
