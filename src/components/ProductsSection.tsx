@@ -9,7 +9,7 @@ import s4sImg from "@/assets/product-s4s.webp";
 import escadasImg from "@/assets/product-escadas.webp";
 
 const products = [
-  { title: "Pisos & Assoalhos", description: "Pisos maciços e engenheirados em madeiras nobres nacionais e importadas para ambientes sofisticados.", image: pisosImg, alt: "Piso de madeira nobre brasileira", link: "/pisos-e-assoalhos", cta: "Ver detalhes" },
+  { title: "Pisos & Assoalhos", description: "{ title: "Pisos & Assoalhos", description: "Pisos maciços e estruturados em madeiras nobres nacionais e importadas para ambientes sofisticados.", image: pisosImg, alt: "Piso de madeira nobre brasileira", link: "/pisos-e-assoalhos", cta: "Ver detalhes" }, nacionais e importadas para ambientes sofisticados.", image: pisosImg, alt: "Piso de madeira nobre brasileira", link: "/pisos-e-assoalhos", cta: "Ver detalhes" },
   { title: "Decks", description: "Decks em madeiras de alta resistência para áreas externas, piscinas e varandas.", image: decksImg, alt: "Deck de madeira nobre ao redor de piscina", link: "/decks", cta: "Ver detalhes" },
   { title: "Forros", description: "Forros de madeira que transformam tetos em elementos de design e aconchego.", image: forrosImg, alt: "Forro de madeira nobre em ambiente moderno", link: "/forros", cta: "Ver detalhes" },
   { title: "Escadas", description: "Escadas em madeiras nobres com acabamento impecável, unindo segurança, durabilidade e elegância.", image: escadasImg, alt: "Escada de madeira nobre com design moderno", link: "/escadas", cta: "Ver detalhes" },

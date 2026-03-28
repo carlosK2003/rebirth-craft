@@ -56,7 +56,7 @@ const PisosAssoalhos = () => {
       </section>
       <section className="py-14 lg:py-20 bg-card">
         <div className="container mx-auto px-4 lg:px-8">
-          <ProductCarousel items={pisosEngenheirados} title="Pisos Engenheirados" />
+          <ProductCarousel items={pisosEstruturados} title="Pisos Estruturados" />
         </div>
       </section>
       <section className="py-14 lg:py-20" ref={projetosRef}>

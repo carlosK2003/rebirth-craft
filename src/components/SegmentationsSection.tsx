@@ -25,7 +25,7 @@ const categories: Category[] = [
     title: "Pisos",
     segments: [
       { name: "Piso Maciço", description: "Peça inteira de madeira nobre, oferecendo máxima autenticidade e durabilidade por gerações.", species: ["Ipê", "Jatobá", "Cumaru", "Muiracatiara", "Tauari"], benefits: ["Durabilidade excepcional", "Pode ser lixado múltiplas vezes", "Valoriza o imóvel", "Beleza natural única"], image: pisosImg },
-      { name: "Piso Engenheirado", description: "Camada superior de madeira nobre sobre base estabilizada, combinando beleza natural com maior estabilidade dimensional.", species: ["Ipê", "Jatobá", "Cumaru", "Amendoim", "Sucupira"], benefits: ["Estabilidade dimensional", "Instalação versátil", "Compatível com piso aquecido", "Custo-benefício superior"], image: pisosImg },
+      { name: "Piso Estruturado", description: "Camada superior de madeira nobre sobre base estabilizada, combinando beleza natural com maior estabilidade dimensional.", species: ["Ipê", "Jatobá", "Cumaru", "Amendoim", "Sucupira"], benefits: ["Estabilidade dimensional", "Instalação versátil", "Compatível com piso aquecido", "Custo-benefício superior"], image: pisosImg },
     ],
   },
   {
