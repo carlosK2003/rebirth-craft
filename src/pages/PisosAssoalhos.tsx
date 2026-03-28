@@ -11,8 +11,8 @@ import macicoGarapeira from "@/assets/piso-macico-garapeira.jpg";
 import macicoPeroba from "@/assets/piso-macico-peroba.jpg";
 import macicoSucupira from "@/assets/piso-macico-sucupira.jpg";
 import macicoTauari from "@/assets/piso-macico-tauari.jpg";
-import engCarvalhoPrime from "@/assets/piso-eng-carvalho-prime.jpg";
-import engTauariPrime from "@/assets/piso-eng-tauari-prime.jpg";
+import engCarvalhoPrime from "@/assets/piso-eng-carvalho-prime.webp";
+import engTauariPrime from "@/assets/piso-eng-tauari-prime.webp";
 import projeto1 from "@/assets/piso-projeto-1.webp";
 import projeto2 from "@/assets/piso-projeto-2.webp";
 import projeto3 from "@/assets/piso-projeto-3.webp";
@@ -33,9 +33,9 @@ const pisosMacicos = [
   { name: "Tauari", image: macicoTauari, desc: "Tom claro e uniforme, excelente estabilidade dimensional. Ideal para ambientes modernos." },
 ];
 
-const pisosEngenheirados = [
+const pisosEstruturados = [
   { name: "Carvalho Prime Escovado", image: engCarvalhoPrime, desc: "Elegância europeia com textura escovada que realça os veios naturais." },
-  { name: "Tauari Prime", image: engTauariPrime, desc: "Leveza e sofisticação em base engenheirada de alta estabilidade." },
+  { name: "Tauari Prime", image: engTauariPrime, desc: "Leveza e sofisticação em base estruturada de alta estabilidade." },
 ];
 
 const projetos = [projeto1, projeto2, projeto3, projeto4, projeto5, projeto6, projeto7, projeto8, projeto9, projeto10];
@@ -56,7 +56,7 @@ const PisosAssoalhos = () => {
       </section>
       <section className="py-14 lg:py-20 bg-card">
         <div className="container mx-auto px-4 lg:px-8">
-          <ProductCarousel items={pisosEngenheirados} title="Pisos Engenheirados" />
+          <ProductCarousel items={pisosEstruturados} title="Pisos Estruturados" />
         </div>
       </section>
       <section className="py-14 lg:py-20" ref={projetosRef}>
