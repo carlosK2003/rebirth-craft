@@ -33,9 +33,9 @@ const pisosMacicos = [
   { name: "Tauari", image: macicoTauari, desc: "Tom claro e uniforme, excelente estabilidade dimensional. Ideal para ambientes modernos." },
 ];
 
-const pisosEngenheirados = [
+const pisosEstruturados = [
   { name: "Carvalho Prime Escovado", image: engCarvalhoPrime, desc: "Elegância europeia com textura escovada que realça os veios naturais." },
-  { name: "Tauari Prime", image: engTauariPrime, desc: "Leveza e sofisticação em base engenheirada de alta estabilidade." },
+  { name: "Tauari Prime", image: engTauariPrime, desc: "Leveza e sofisticação em base estruturada de alta estabilidade." },
 ];
 
 const projetos = [projeto1, projeto2, projeto3, projeto4, projeto5, projeto6, projeto7, projeto8, projeto9, projeto10];
