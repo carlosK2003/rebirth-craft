@@ -70,6 +70,20 @@ const ProductsSection = () => {
             return <Link key={product.title} to={product.link}>{content}</Link>;
           })}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="flex justify-center mt-12"
+        >
+          <Link
+            to="/inspiracoes"
+            className="px-8 py-4 bg-accent text-accent-foreground font-sans font-semibold text-sm uppercase tracking-widest hover:bg-gold-light transition-all duration-300 rounded-sm inline-block"
+          >
+            CONHECER INSPIRAÇÕES
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

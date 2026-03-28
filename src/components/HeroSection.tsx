@@ -11,14 +11,25 @@ import slide7 from "@/assets/hero-slide-7.webp";
 import slide8 from "@/assets/hero-slide-8.webp";
 import slide9 from "@/assets/hero-slide-9.webp";
 import slide10 from "@/assets/hero-slide-10.webp";
+import dSlide1 from "@/assets/hero-desktop-1.webp";
+import dSlide2 from "@/assets/hero-desktop-2.webp";
+import dSlide3 from "@/assets/hero-desktop-3.webp";
+import dSlide4 from "@/assets/hero-desktop-4.webp";
+import dSlide5 from "@/assets/hero-desktop-5.webp";
+import dSlide6 from "@/assets/hero-desktop-6.webp";
+import dSlide7 from "@/assets/hero-desktop-7.webp";
+import dSlide8 from "@/assets/hero-desktop-8.webp";
+import dSlide9 from "@/assets/hero-desktop-9.webp";
+import dSlide10 from "@/assets/hero-desktop-10.webp";
 
-const slides = [slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10];
+const mobileSlides = [slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10];
+const desktopSlides = [dSlide1, dSlide2, dSlide3, dSlide4, dSlide5, dSlide6, dSlide7, dSlide8, dSlide9, dSlide10];
 
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
 
   const next = useCallback(() => {
-    setCurrent((prev) => (prev + 1) % slides.length);
+    setCurrent((prev) => (prev + 1) % mobileSlides.length);
   }, []);
 
   useEffect(() => {
@@ -32,11 +43,11 @@ const HeroSection = () => {
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Slideshow background with crossfade */}
-      <div className="absolute inset-0">
-        {slides.map((src, i) => (
+      {/* Mobile/Tablet slideshow (hidden on desktop) */}
+      <div className="absolute inset-0 lg:hidden">
+        {mobileSlides.map((src, i) => (
           <img
-            key={i}
+            key={`mobile-${i}`}
             src={src}
             alt={`BMN ambiente ${i + 1}`}
             className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out"
@@ -44,8 +55,24 @@ const HeroSection = () => {
             loading={i === 0 ? "eager" : "lazy"}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-b from-wood-dark/70 via-wood-dark/50 to-wood-dark/80" />
       </div>
+
+      {/* Desktop slideshow (hidden on mobile/tablet) */}
+      <div className="absolute inset-0 hidden lg:block">
+        {desktopSlides.map((src, i) => (
+          <img
+            key={`desktop-${i}`}
+            src={src}
+            alt={`BMN ambiente desktop ${i + 1}`}
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out"
+            style={{ opacity: i === current ? 1 : 0 }}
+            loading={i === 0 ? "eager" : "lazy"}
+          />
+        ))}
+      </div>
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-wood-dark/70 via-wood-dark/50 to-wood-dark/80" />
 
       <div className="relative z-10 container mx-auto px-4 text-center max-w-4xl">
         <motion.div
