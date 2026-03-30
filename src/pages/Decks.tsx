@@ -31,7 +31,7 @@ const deckSpecies = [
   { name: "Ipê", image: deckIpe, desc: "Alta resistência natural, cor castanho-escuro profundo. O clássico absoluto." },
 ];
 
-const projetos = [dp1, dp2, dp3, dp4, dp5, dp6, dp7, dp8];
+const projetos = [dp1, dp2, dp3, dp4, dp5, dp6, dp7, dp8, dp9, dp10];
 
 const Decks = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
