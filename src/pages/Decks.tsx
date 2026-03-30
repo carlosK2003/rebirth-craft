@@ -11,14 +11,16 @@ import deckGarapeira from "@/assets/deck-garapeira.jpg";
 import deckCumaruChampagne from "@/assets/deck-cumaru-champagne.jpg";
 import deckCumaruRosa from "@/assets/deck-cumaru-rosa.jpg";
 import deckIpe from "@/assets/deck-ipe.jpg";
-import dp1 from "@/assets/deck-projeto-1.jpg";
-import dp2 from "@/assets/deck-projeto-2.jpg";
-import dp3 from "@/assets/deck-projeto-3.jpg";
-import dp4 from "@/assets/deck-projeto-4.jpg";
-import dp5 from "@/assets/deck-projeto-5.jpg";
-import dp6 from "@/assets/deck-projeto-6.jpg";
-import dp7 from "@/assets/deck-projeto-7.jpg";
-import dp8 from "@/assets/deck-projeto-8.jpg";
+import dp1 from "@/assets/deck-projeto-1.webp";
+import dp2 from "@/assets/deck-projeto-2.webp";
+import dp3 from "@/assets/deck-projeto-3.webp";
+import dp4 from "@/assets/deck-projeto-4.webp";
+import dp5 from "@/assets/deck-projeto-5.webp";
+import dp6 from "@/assets/deck-projeto-6.webp";
+import dp7 from "@/assets/deck-projeto-7.webp";
+import dp8 from "@/assets/deck-projeto-8.webp";
+import dp9 from "@/assets/deck-projeto-9.webp";
+import dp10 from "@/assets/deck-projeto-10.webp";
 
 const deckSpecies = [
   { name: "Itaúba", image: deckItauba, desc: "Resistência natural a fungos e umidade, tom dourado-acastanhado nobre." },
