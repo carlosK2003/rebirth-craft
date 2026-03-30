@@ -5,12 +5,12 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { ProductCarousel, Marquee } from "@/components/ProductCarousel";
 
-import macicoCumaruChampagne from "@/assets/piso-macico-cumaru-champagne.jpg";
-import macicoCumaruFerro from "@/assets/piso-macico-cumaru-ferro.jpg";
-import macicoGarapeira from "@/assets/piso-macico-garapeira.jpg";
-import macicoPeroba from "@/assets/piso-macico-peroba.jpg";
-import macicoSucupira from "@/assets/piso-macico-sucupira.jpg";
-import macicoTauari from "@/assets/piso-macico-tauari.jpg";
+import macicoCumaruChampagne from "@/assets/piso-macico-cumaru-champagne.webp";
+import macicoCumaruFerro from "@/assets/piso-macico-cumaru-ferro.webp";
+import macicoGarapeira from "@/assets/piso-macico-garapeira.webp";
+import macicoPeroba from "@/assets/piso-macico-peroba.webp";
+import macicoSucupira from "@/assets/piso-macico-sucupira.webp";
+import macicoTauari from "@/assets/piso-macico-tauari.webp";
 import engCarvalhoPrime from "@/assets/piso-eng-carvalho-prime.webp";
 import engTauariPrime from "@/assets/piso-eng-tauari-prime.webp";
 import projeto1 from "@/assets/piso-projeto-1.webp";
