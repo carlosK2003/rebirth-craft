@@ -5,12 +5,12 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { ProductCarousel, Marquee } from "@/components/ProductCarousel";
 
-import deckItauba from "@/assets/deck-itauba.jpg";
-import deckIpeOliva from "@/assets/deck-ipe-oliva.jpg";
-import deckGarapeira from "@/assets/deck-garapeira.jpg";
-import deckCumaruChampagne from "@/assets/deck-cumaru-champagne.jpg";
-import deckCumaruRosa from "@/assets/deck-cumaru-rosa.jpg";
-import deckIpe from "@/assets/deck-ipe.jpg";
+import deckItauba from "@/assets/deck-itauba.webp";
+import deckIpeOliva from "@/assets/deck-ipe-oliva.webp";
+import deckGarapeira from "@/assets/deck-garapeira.webp";
+import deckCumaruChampagne from "@/assets/deck-cumaru-champagne.webp";
+import deckCumaruRosa from "@/assets/deck-cumaru-rosa.webp";
+import deckIpe from "@/assets/deck-ipe.webp";
 import dp1 from "@/assets/deck-projeto-1.webp";
 import dp2 from "@/assets/deck-projeto-2.webp";
 import dp3 from "@/assets/deck-projeto-3.webp";
