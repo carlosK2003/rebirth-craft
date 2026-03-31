@@ -1,65 +1,14 @@
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
-import pisosImg from "@/assets/product-pisos.jpg";
-import decksImg from "@/assets/product-decks.jpg";
-import forrosImg from "@/assets/product-forros.jpg";
-import s4sImg from "@/assets/product-s4s.jpg";
-
-type Segment = {
-  name: string;
-  description: string;
-  species: string[];
-  benefits: string[];
-  image: string;
-};
-
-type Category = {
-  id: string;
-  title: string;
-  segments: Segment[];
-};
-
-const categories: Category[] = [
-  {
-    id: "pisos",
-    title: "Pisos",
-    segments: [
-      { name: "Piso Maciço", description: "Peça inteira de madeira nobre, oferecendo máxima autenticidade e durabilidade por gerações.", species: ["Ipê", "Jatobá", "Cumaru", "Muiracatiara", "Tauari"], benefits: ["Durabilidade excepcional", "Pode ser lixado múltiplas vezes", "Valoriza o imóvel", "Beleza natural única"], image: pisosImg },
-      { name: "Piso Estruturado", description: "Camada superior de madeira nobre sobre base estabilizada, combinando beleza natural com maior estabilidade dimensional.", species: ["Ipê", "Jatobá", "Cumaru", "Amendoim", "Sucupira"], benefits: ["Estabilidade dimensional", "Instalação versátil", "Compatível com piso aquecido", "Custo-benefício superior"], image: pisosImg },
-    ],
-  },
-  {
-    id: "decks",
-    title: "Decks",
-    segments: [
-      { name: "Deck para Piscina", description: "Madeiras de altíssima resistência à umidade e intempéries, ideais para bordas de piscina.", species: ["Ipê", "Cumaru", "Garapa", "Itaúba"], benefits: ["Resistente à umidade", "Antiderrapante natural", "Alta durabilidade", "Baixa manutenção"], image: decksImg },
-      { name: "Deck para Varanda", description: "Transforme varandas e terraços em espaços de convivência acolhedores.", species: ["Cumaru", "Garapa", "Ipê", "Tauari"], benefits: ["Conforto térmico", "Estética premium", "Resistente ao sol", "Fácil instalação"], image: decksImg },
-    ],
-  },
-  {
-    id: "forros",
-    title: "Forros",
-    segments: [
-      { name: "Forro de Madeira Nobre", description: "Painéis de madeira nobre para tetos que agregam sofisticação, conforto acústico e térmico.", species: ["Cedrinho", "Tauari", "Cumaru", "Jatobá"], benefits: ["Isolamento acústico", "Conforto térmico", "Estética sofisticada", "Fácil manutenção"], image: forrosImg },
-    ],
-  },
-  {
-    id: "s4s",
-    title: "Madeiras S4S",
-    segments: [
-      { name: "S4S Premium", description: "Peças aplainadas nos quatro lados, prontas para uso em marcenaria e projetos arquitetônicos.", species: ["Ipê", "Jatobá", "Cumaru", "Muiracatiara", "Garapa"], benefits: ["Pronto para uso", "Acabamento preciso", "Versatilidade", "Padrão de qualidade superior"], image: s4sImg },
-    ],
-  },
-];
+import { ChevronDown } from "lucide-react";
+import grupoBmnLogo from "@/assets/grupo-bmn-logo.png";
+import maderattoLogo from "@/assets/maderatto-logo.png";
+import grupoBmnBg from "@/assets/grupo-bmn-bg.webp";
 
 const SegmentationsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [activeCategory, setActiveCategory] = useState("pisos");
-  const [activeSegment, setActiveSegment] = useState(0);
-
-  const current = categories.find((c) => c.id === activeCategory)!;
-  const segment = current.segments[activeSegment];
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <section id="segmentacoes" className="py-24 lg:py-32 bg-card" ref={ref}>
@@ -72,76 +21,113 @@ const SegmentationsSection = () => {
         >
           <div className="w-12 h-[2px] bg-accent mx-auto mb-6" />
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Nossas <span className="text-accent italic">Segmentações</span>
+            Grupo BMN | <span className="text-accent italic">Do Projeto à Execução</span>
           </h2>
-          <p className="text-muted-foreground font-sans max-w-2xl mx-auto">
-            Explore nossas linhas de produtos segmentadas por tipo e aplicação.
-          </p>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-10">
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => { setActiveCategory(cat.id); setActiveSegment(0); }}
-              className={`px-6 py-3 rounded-sm font-sans text-sm font-medium uppercase tracking-wider transition-all duration-300 ${
-                activeCategory === cat.id ? "bg-accent text-accent-foreground shadow-lg" : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-              }`}
-            >
-              {cat.title}
-            </button>
-          ))}
-        </div>
-
-        {current.segments.length > 1 && (
-          <div className="flex justify-center gap-2 mb-10">
-            {current.segments.map((seg, i) => (
-              <button
-                key={seg.name}
-                onClick={() => setActiveSegment(i)}
-                className={`px-5 py-2 rounded-sm font-sans text-xs font-medium uppercase tracking-wider transition-all duration-300 border ${
-                  activeSegment === i ? "border-accent text-accent bg-accent/5" : "border-border text-muted-foreground hover:border-accent/50"
-                }`}
-              >
-                {seg.name}
-              </button>
-            ))}
-          </div>
-        )}
-
+        {/* Hero-style background with logos */}
         <motion.div
-          key={segment.name}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="grid lg:grid-cols-2 gap-12 items-center"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="relative w-full rounded-sm overflow-hidden mb-14"
         >
-          <div className="overflow-hidden rounded-sm">
-            <img src={segment.image} alt={segment.name} className="w-full h-[400px] object-cover" loading="lazy" />
-          </div>
-          <div>
-            <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">{segment.name}</h3>
-            <p className="text-muted-foreground font-sans leading-relaxed mb-8">{segment.description}</p>
-            <div className="mb-8">
-              <h4 className="font-sans text-xs uppercase tracking-widest text-accent font-semibold mb-3">Espécies Disponíveis</h4>
-              <div className="flex flex-wrap gap-2">
-                {segment.species.map((sp) => (
-                  <span key={sp} className="px-3 py-1.5 bg-secondary text-secondary-foreground text-xs font-sans font-medium rounded-sm">{sp}</span>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h4 className="font-sans text-xs uppercase tracking-widest text-accent font-semibold mb-3">Benefícios</h4>
-              <ul className="grid grid-cols-2 gap-2">
-                {segment.benefits.map((b) => (
-                  <li key={b} className="flex items-center gap-2 text-sm text-muted-foreground font-sans">
-                    <div className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0" />
-                    {b}
-                  </li>
-                ))}
-              </ul>
+          <div className="relative w-full aspect-[16/9] md:aspect-[21/9]">
+            <img
+              src={grupoBmnBg}
+              alt="Projeto arquitetônico com madeira nobre BMN"
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-wood-dark/60" />
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 md:gap-10 px-6">
+              <img
+                src={grupoBmnLogo}
+                alt="BMN – Brasil Madeiras Nobre"
+                className="w-40 md:w-56 lg:w-64 object-contain drop-shadow-lg"
+              />
+              <img
+                src={maderattoLogo}
+                alt="Maderatto Pisos & Revestimentos"
+                className="w-36 md:w-48 lg:w-56 object-contain drop-shadow-lg"
+              />
             </div>
           </div>
+        </motion.div>
+
+        {/* Visible text */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.4 }}
+          className="max-w-3xl mx-auto text-center"
+        >
+          <p className="text-muted-foreground font-sans leading-relaxed mb-6">
+            A BMN – Brasil Madeiras Nobres traduz a essência da madeira em sua forma mais nobre, oferecendo materiais que aliam estética, durabilidade e autenticidade para projetos de alto padrão.
+          </p>
+          <p className="text-muted-foreground font-sans leading-relaxed mb-6">
+            No Grupo BMN, cada etapa é conduzida com precisão. A execução fica sob responsabilidade da Maderatto Pisos, especializada em obras e instalações em madeira, garantindo que a matéria-prima seja aplicada com o mesmo nível de excelência com que foi selecionada.
+          </p>
+          <p className="text-muted-foreground font-sans leading-relaxed mb-10">
+            O resultado é uma operação integrada, onde conceito, material e execução se conectam de forma fluida e consistente.
+          </p>
+
+          {/* Reveal button */}
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="inline-flex items-center gap-2 text-accent font-sans text-sm font-medium uppercase tracking-wider hover:text-accent/80 transition-colors duration-300 group"
+          >
+            <span>{expanded ? "Ocultar detalhes" : "Revelar mais sobre o Grupo BMN"}</span>
+            <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${expanded ? "rotate-180" : ""}`} />
+          </button>
+
+          {/* Expandable content */}
+          <AnimatePresence>
+            {expanded && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+                <div className="pt-10 text-left max-w-2xl mx-auto space-y-10">
+                  {/* Integração */}
+                  <div>
+                    <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground mb-4">Integração de Alto Padrão</h3>
+                    <ul className="space-y-2 text-muted-foreground font-sans text-sm leading-relaxed">
+                      <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Curadoria refinada de madeiras pela BMN</li>
+                      <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Execução conduzida com rigor técnico pela Maderatto Pisos</li>
+                      <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Integração plena entre fornecimento e aplicação</li>
+                      <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Acompanhamento minucioso em todas as fases do projeto</li>
+                    </ul>
+                  </div>
+
+                  {/* Diferenciais */}
+                  <div>
+                    <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground mb-4">Diferenciais</h3>
+                    <ul className="space-y-2 text-muted-foreground font-sans text-sm leading-relaxed">
+                      <li>✔ Precisão na aplicação de materiais nobres</li>
+                      <li>✔ Acabamentos que valorizam cada detalhe do ambiente</li>
+                      <li>✔ Processos integrados com alto nível de controle</li>
+                      <li>✔ Execução alinhada ao conceito original do projeto</li>
+                    </ul>
+                  </div>
+
+                  {/* Compromisso */}
+                  <div>
+                    <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground mb-4">Compromisso com a Excelência</h3>
+                    <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
+                      Cada projeto é tratado de forma singular, respeitando a identidade do ambiente e as características naturais da madeira.
+                    </p>
+                    <p className="text-muted-foreground font-sans text-sm leading-relaxed">
+                      A atenção aos detalhes, aliada ao domínio técnico, garante resultados que vão além da funcionalidade — entregando sofisticação, harmonia e longevidade.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.div>
       </div>
     </section>
