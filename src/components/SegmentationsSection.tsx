@@ -63,7 +63,7 @@ const SegmentationsSection = () => {
           className="max-w-3xl mx-auto text-center"
         >
           <p className="text-muted-foreground font-sans leading-relaxed mb-6">
-            No <span style={{ color: "#BF9540" }}>Grupo BMN</span>, cada etapa é conduzida com precisão. A execução fica sob responsabilidade da <span style={{ color: "#BF9540" }}>Maderatto Pisos e Revestimentos</span>, especializada em obras e instalações em madeira, garantindo que a matéria-prima nobre seja aplicada com o mesmo nível de excelência com que foi selecionada.
+            No <span className="font-bold" style={{ color: "#BF9540" }}>Grupo BMN</span>, cada etapa é conduzida com precisão. A execução fica sob responsabilidade da <span className="font-bold" style={{ color: "#BF9540" }}>Maderatto Pisos e Revestimentos</span>, especializada em obras e instalações em madeira, garantindo que a matéria-prima nobre seja aplicada com o mesmo nível de excelência com que foi selecionada.
           </p>
           <p className="text-muted-foreground font-sans leading-relaxed mb-10">
             O resultado é uma operação integrada, onde conceito, material e execução se conectam de forma fluida e consistente.
