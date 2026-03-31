@@ -63,10 +63,7 @@ const SegmentationsSection = () => {
           className="max-w-3xl mx-auto text-center"
         >
           <p className="text-muted-foreground font-sans leading-relaxed mb-6">
-            A BMN – Brasil Madeiras Nobres traduz a essência da madeira em sua forma mais nobre, oferecendo materiais que aliam estética, durabilidade e autenticidade para projetos de alto padrão.
-          </p>
-          <p className="text-muted-foreground font-sans leading-relaxed mb-6">
-            No Grupo BMN, cada etapa é conduzida com precisão. A execução fica sob responsabilidade da Maderatto Pisos, especializada em obras e instalações em madeira, garantindo que a matéria-prima seja aplicada com o mesmo nível de excelência com que foi selecionada.
+            No <span style={{ color: "#BF9540" }}>Grupo BMN</span>, cada etapa é conduzida com precisão. A execução fica sob responsabilidade da <span style={{ color: "#BF9540" }}>Maderatto Pisos e Revestimentos</span>, especializada em obras e instalações em madeira, garantindo que a matéria-prima nobre seja aplicada com o mesmo nível de excelência com que foi selecionada.
           </p>
           <p className="text-muted-foreground font-sans leading-relaxed mb-10">
             O resultado é uma operação integrada, onde conceito, material e execução se conectam de forma fluida e consistente.
