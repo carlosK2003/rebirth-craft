@@ -14,7 +14,8 @@ const features = [
 
 const mobileImages = [aboutMobile1, aboutMobile2, aboutMobile3];
 
-const keywords = ["Nobreza", "Elegância", "Sofisticação", "Requinte", "Durabilidade", "Legado", "Paixão"];
+const keywords = ["Nobreza", "Elegância", "Sofisticação", "Requinte", "Durabilidade", "Legado"];
+const keywordsWithPaixao = [...keywords, "Paixão"];
 
 const AboutSection = () => {
   const ref = useRef(null);
