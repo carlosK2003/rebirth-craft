@@ -32,7 +32,7 @@ const SegmentationsSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative w-full rounded-sm overflow-hidden mb-14"
         >
-          <div className="relative w-full aspect-[16/9] md:aspect-[21/9]">
+          <div className="relative w-full aspect-[14/9] md:aspect-[18/9]">
             <img
               src={grupoBmnBg}
               alt="Projeto arquitetônico com madeira nobre BMN"
@@ -63,10 +63,7 @@ const SegmentationsSection = () => {
           className="max-w-3xl mx-auto text-center"
         >
           <p className="text-muted-foreground font-sans leading-relaxed mb-6">
-            A BMN – Brasil Madeiras Nobres traduz a essência da madeira em sua forma mais nobre, oferecendo materiais que aliam estética, durabilidade e autenticidade para projetos de alto padrão.
-          </p>
-          <p className="text-muted-foreground font-sans leading-relaxed mb-6">
-            No Grupo BMN, cada etapa é conduzida com precisão. A execução fica sob responsabilidade da Maderatto Pisos, especializada em obras e instalações em madeira, garantindo que a matéria-prima seja aplicada com o mesmo nível de excelência com que foi selecionada.
+            No <span style={{ color: "#BF9540" }}>Grupo BMN</span>, cada etapa é conduzida com precisão. A execução fica sob responsabilidade da <span style={{ color: "#BF9540" }}>Maderatto Pisos e Revestimentos</span>, especializada em obras e instalações em madeira, garantindo que a matéria-prima nobre seja aplicada com o mesmo nível de excelência com que foi selecionada.
           </p>
           <p className="text-muted-foreground font-sans leading-relaxed mb-10">
             O resultado é uma operação integrada, onde conceito, material e execução se conectam de forma fluida e consistente.
@@ -97,7 +94,7 @@ const SegmentationsSection = () => {
                     <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground mb-4">Integração de Alto Padrão</h3>
                     <ul className="space-y-2 text-muted-foreground font-sans text-sm leading-relaxed">
                       <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Curadoria refinada de madeiras pela BMN</li>
-                      <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Execução conduzida com rigor técnico pela Maderatto Pisos</li>
+                      <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Execução conduzida com rigor técnico pela Maderatto Pisos e Revestimentos</li>
                       <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Integração plena entre fornecimento e aplicação</li>
                       <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Acompanhamento minucioso em todas as fases do projeto</li>
                     </ul>
