@@ -1,5 +1,6 @@
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 import aboutImg from "@/assets/about-wood.webp";
 import aboutMobile1 from "@/assets/about-mobile-1.webp";
 import aboutMobile2 from "@/assets/about-mobile-2.webp";
@@ -14,12 +15,15 @@ const features = [
 
 const mobileImages = [aboutMobile1, aboutMobile2, aboutMobile3];
 
-const keywords = ["Nobreza", "Elegância", "Sofisticação", "Requinte", "Durabilidade", "Legado", "Paixão"];
+const keywords = ["Nobreza", "Elegância", "Sofisticação", "Requinte", "Durabilidade", "Legado"];
+const keywordsWithPaixao = [...keywords, "Paixão"];
 
 const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [expanded, setExpanded] = useState(false);
+  const isMobile = useIsMobile();
+  const activeKeywords = isMobile ? keywords : keywordsWithPaixao;
 
   return (
     <section id="sobre" className="py-14 lg:py-20 bg-card" ref={ref}>
@@ -37,10 +41,10 @@ const AboutSection = () => {
 
           {/* Keywords */}
           <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 mt-6">
-            {keywords.map((word, i) => (
+            {activeKeywords.map((word, i) => (
               <span key={i} className="flex items-center gap-3">
                 <span className="font-serif text-sm md:text-base tracking-[0.15em] uppercase text-accent/80">{word}</span>
-                {i < keywords.length - 1 && (
+                {i < activeKeywords.length - 1 && (
                   <span className="text-accent/40 text-xs">·</span>
                 )}
               </span>
@@ -52,7 +56,7 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-16 max-w-4xl mx-auto"
+          className="mb-16 max-w-4xl mx-auto -mt-2"
         >
           <img
             src={aboutImg}
