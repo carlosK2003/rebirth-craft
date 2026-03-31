@@ -63,7 +63,7 @@ const SegmentationsSection = () => {
           className="max-w-3xl mx-auto text-center"
         >
           <p className="text-muted-foreground font-sans leading-relaxed mb-6">
-            No <span style={{ color: "#BF9540" }}>Grupo BMN</span>, cada etapa é conduzida com precisão. A execução fica sob responsabilidade da <span style={{ color: "#BF9540" }}>Maderatto Pisos e Revestimentos</span>, especializada em obras e instalações em madeira, garantindo que a matéria-prima nobre seja aplicada com o mesmo nível de excelência com que foi selecionada.
+            No <span className="font-bold" style={{ color: "#BF9540" }}>Grupo BMN</span>, cada etapa é conduzida com precisão. A execução fica sob responsabilidade da <span className="font-bold" style={{ color: "#BF9540" }}>Maderatto Pisos e Revestimentos</span>, especializada em obras e instalações em madeira, garantindo que a matéria-prima nobre seja aplicada com o mesmo nível de excelência com que foi selecionada.
           </p>
           <p className="text-muted-foreground font-sans leading-relaxed mb-10">
             O resultado é uma operação integrada, onde conceito, material e execução se conectam de forma fluida e consistente.
@@ -94,7 +94,7 @@ const SegmentationsSection = () => {
                     <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground mb-4">Integração de Alto Padrão</h3>
                     <ul className="space-y-2 text-muted-foreground font-sans text-sm leading-relaxed">
                       <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Curadoria refinada de madeiras pela BMN</li>
-                      <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Execução conduzida com rigor técnico pela Maderatto Pisos e Revestimentos</li>
+                      <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Execução conduzida com rigor técnico pela <span className="font-bold" style={{ color: "#BF9540" }}>Maderatto Pisos e Revestimentos</span></li>
                       <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Integração plena entre fornecimento e aplicação</li>
                       <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Acompanhamento minucioso em todas as fases do projeto</li>
                     </ul>
