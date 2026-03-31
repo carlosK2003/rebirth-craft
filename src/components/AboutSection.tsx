@@ -41,10 +41,10 @@ const AboutSection = () => {
 
           {/* Keywords */}
           <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 mt-6">
-            {keywords.map((word, i) => (
+            {activeKeywords.map((word, i) => (
               <span key={i} className="flex items-center gap-3">
                 <span className="font-serif text-sm md:text-base tracking-[0.15em] uppercase text-accent/80">{word}</span>
-                {i < keywords.length - 1 && (
+                {i < activeKeywords.length - 1 && (
                   <span className="text-accent/40 text-xs">·</span>
                 )}
               </span>
