@@ -22,6 +22,8 @@ const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [expanded, setExpanded] = useState(false);
+  const isMobile = useIsMobile();
+  const activeKeywords = isMobile ? keywords : keywordsWithPaixao;
 
   return (
     <section id="sobre" className="py-14 lg:py-20 bg-card" ref={ref}>
