@@ -32,7 +32,7 @@ const SegmentationsSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative w-full rounded-sm overflow-hidden mb-14"
         >
-          <div className="relative w-full aspect-[16/9] md:aspect-[21/9]">
+          <div className="relative w-full aspect-[14/9] md:aspect-[18/9]">
             <img
               src={grupoBmnBg}
               alt="Projeto arquitetônico com madeira nobre BMN"
