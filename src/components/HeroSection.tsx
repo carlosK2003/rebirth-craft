@@ -1,74 +1,31 @@
 import { motion } from "framer-motion";
-import { useState, useEffect, useCallback } from "react";
 import logoBmn from "@/assets/logo-bmn.png";
-import slide1 from "@/assets/hero-slide-1.webp";
-import slide2 from "@/assets/hero-slide-2.webp";
-import slide3 from "@/assets/hero-slide-3.webp";
-import slide4 from "@/assets/hero-slide-4.webp";
-import slide5 from "@/assets/hero-slide-5.webp";
-import slide6 from "@/assets/hero-slide-6.webp";
-import slide7 from "@/assets/hero-slide-7.webp";
-import slide8 from "@/assets/hero-slide-8.webp";
-import slide9 from "@/assets/hero-slide-9.webp";
-import slide10 from "@/assets/hero-slide-10.webp";
-import dSlide1 from "@/assets/hero-desktop-1.webp";
-import dSlide2 from "@/assets/hero-desktop-2.webp";
-import dSlide3 from "@/assets/hero-desktop-3.webp";
-import dSlide4 from "@/assets/hero-desktop-4.webp";
-import dSlide5 from "@/assets/hero-desktop-5.webp";
-import dSlide6 from "@/assets/hero-desktop-6.webp";
-import dSlide7 from "@/assets/hero-desktop-7.webp";
-import dSlide8 from "@/assets/hero-desktop-8.webp";
-import dSlide9 from "@/assets/hero-desktop-9.webp";
-import dSlide10 from "@/assets/hero-desktop-10.webp";
-
-const mobileSlides = [slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10];
-const desktopSlides = [dSlide1, dSlide2, dSlide3, dSlide4, dSlide5, dSlide6, dSlide7, dSlide8, dSlide9, dSlide10];
 
 const HeroSection = () => {
-  const [current, setCurrent] = useState(0);
-
-  const next = useCallback(() => {
-    setCurrent((prev) => (prev + 1) % mobileSlides.length);
-  }, []);
-
-  useEffect(() => {
-    const timer = setInterval(next, 4000);
-    return () => clearInterval(timer);
-  }, [next]);
-
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Mobile/Tablet slideshow (hidden on desktop) */}
-      <div className="absolute inset-0 lg:hidden">
-        {mobileSlides.map((src, i) => (
-          <img
-            key={`mobile-${i}`}
-            src={src}
-            alt={`BMN ambiente ${i + 1}`}
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out"
-            style={{ opacity: i === current ? 1 : 0 }}
-            loading={i === 0 ? "eager" : "lazy"}
+      {/* YouTube video background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <iframe
+            src="https://www.youtube.com/embed/JnxPbjofIXY?autoplay=1&mute=1&loop=1&playlist=JnxPbjofIXY&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0&iv_load_policy=3&start=0"
+            title="BMN Video Background"
+            allow="autoplay; encrypted-media"
+            allowFullScreen={false}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            style={{
+              width: "300vw",
+              height: "300vh",
+              minWidth: "100%",
+              minHeight: "100%",
+              border: "none",
+            }}
           />
-        ))}
-      </div>
-
-      {/* Desktop slideshow (hidden on mobile/tablet) */}
-      <div className="absolute inset-0 hidden lg:block">
-        {desktopSlides.map((src, i) => (
-          <img
-            key={`desktop-${i}`}
-            src={src}
-            alt={`BMN ambiente desktop ${i + 1}`}
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out"
-            style={{ opacity: i === current ? 1 : 0 }}
-            loading={i === 0 ? "eager" : "lazy"}
-          />
-        ))}
+        </div>
       </div>
 
       {/* Overlay */}
