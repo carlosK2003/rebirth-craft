@@ -8,24 +8,17 @@ const HeroSection = () => {
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* YouTube video background */}
+      {/* Video background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 w-full h-full overflow-hidden">
-          <iframe
-            src="https://www.youtube.com/embed/JnxPbjofIXY?autoplay=1&mute=1&loop=1&playlist=JnxPbjofIXY&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0&iv_load_policy=3&start=0"
-            title="BMN Video Background"
-            allow="autoplay; encrypted-media"
-            allowFullScreen={false}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-            style={{
-              width: "300vw",
-              height: "300vh",
-              minWidth: "100%",
-              minHeight: "100%",
-              border: "none",
-            }}
-          />
-        </div>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
       </div>
 
       {/* Overlay */}
