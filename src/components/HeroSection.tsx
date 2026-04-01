@@ -1,9 +1,32 @@
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import logoBmn from "@/assets/logo-bmn.png";
-import { useIsMobile } from "@/hooks/use-mobile";
+
+import heroDesktop1 from "@/assets/hero-desktop-1.webp";
+import heroDesktop2 from "@/assets/hero-desktop-2.webp";
+import heroDesktop3 from "@/assets/hero-desktop-3.webp";
+import heroDesktop4 from "@/assets/hero-desktop-4.webp";
+import heroDesktop5 from "@/assets/hero-desktop-5.webp";
+import heroDesktop6 from "@/assets/hero-desktop-6.webp";
+import heroDesktop7 from "@/assets/hero-desktop-7.webp";
+import heroDesktop8 from "@/assets/hero-desktop-8.webp";
+import heroDesktop9 from "@/assets/hero-desktop-9.webp";
+import heroDesktop10 from "@/assets/hero-desktop-10.webp";
+
+const desktopImages = [
+  heroDesktop1, heroDesktop2, heroDesktop3, heroDesktop4, heroDesktop5,
+  heroDesktop6, heroDesktop7, heroDesktop8, heroDesktop9, heroDesktop10,
+];
 
 const HeroSection = () => {
-  const isMobileOrTablet = useIsMobile();
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % desktopImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
@@ -11,23 +34,30 @@ const HeroSection = () => {
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Video background */}
-      <div className="absolute inset-0">
+      {/* Desktop: Cross-dissolve image slideshow */}
+      <div className="absolute inset-0 hidden lg:block">
+        <AnimatePresence mode="sync">
+          <motion.img
+            key={currentIndex}
+            src={desktopImages[currentIndex]}
+            alt="BMN madeiras nobres"
+            className="absolute inset-0 w-full h-full object-cover"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+          />
+        </AnimatePresence>
+      </div>
+
+      {/* Mobile/Tablet: Video loop */}
+      <div className="absolute inset-0 lg:hidden">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover hidden lg:block"
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover lg:hidden"
+          className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/hero-mobile.mp4" type="video/mp4" />
         </video>
