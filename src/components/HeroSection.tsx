@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import logoBmn from "@/assets/logo-bmn.png";
 import slide1 from "@/assets/hero-slide-1.webp";
 import slide2 from "@/assets/hero-slide-2.webp";
@@ -27,6 +27,8 @@ const desktopSlides = [dSlide1, dSlide2, dSlide3, dSlide4, dSlide5, dSlide6, dSl
 
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
+  const [parallaxY, setParallaxY] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const next = useCallback(() => {
     setCurrent((prev) => (prev + 1) % mobileSlides.length);
@@ -37,14 +39,28 @@ const HeroSection = () => {
     return () => clearInterval(timer);
   }, [next]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        const scrollY = window.scrollY;
+        const sectionHeight = sectionRef.current.offsetHeight;
+        if (scrollY <= sectionHeight) {
+          setParallaxY(scrollY * 0.5);
+        }
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section ref={sectionRef} id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Mobile/Tablet slideshow (hidden on desktop) */}
-      <div className="absolute inset-0 lg:hidden">
+      <div className="absolute inset-0 lg:hidden will-change-transform" style={{ transform: `translateY(${parallaxY}px)`, height: '120%', top: '-10%' }}>
         {mobileSlides.map((src, i) => (
           <img
             key={`mobile-${i}`}
@@ -58,7 +74,7 @@ const HeroSection = () => {
       </div>
 
       {/* Desktop slideshow (hidden on mobile/tablet) */}
-      <div className="absolute inset-0 hidden lg:block">
+      <div className="absolute inset-0 hidden lg:block will-change-transform" style={{ transform: `translateY(${parallaxY}px)`, height: '120%', top: '-10%' }}>
         {desktopSlides.map((src, i) => (
           <img
             key={`desktop-${i}`}
