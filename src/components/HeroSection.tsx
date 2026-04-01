@@ -74,7 +74,7 @@ const HeroSection = () => {
       </div>
 
       {/* Desktop slideshow (hidden on mobile/tablet) */}
-      <div className="absolute inset-0 hidden lg:block">
+      <div className="absolute inset-0 hidden lg:block will-change-transform" style={{ transform: `translateY(${parallaxY}px)`, height: '120%', top: '-10%' }}>
         {desktopSlides.map((src, i) => (
           <img
             key={`desktop-${i}`}
