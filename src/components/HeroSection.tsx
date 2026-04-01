@@ -60,7 +60,7 @@ const HeroSection = () => {
   return (
     <section ref={sectionRef} id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Mobile/Tablet slideshow (hidden on desktop) */}
-      <div className="absolute inset-0 lg:hidden">
+      <div className="absolute inset-0 lg:hidden will-change-transform" style={{ transform: `translateY(${parallaxY}px)`, height: '120%', top: '-10%' }}>
         {mobileSlides.map((src, i) => (
           <img
             key={`mobile-${i}`}
