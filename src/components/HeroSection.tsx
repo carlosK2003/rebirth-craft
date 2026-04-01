@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import logoBmn from "@/assets/logo-bmn.png";
 import slide1 from "@/assets/hero-slide-1.webp";
 import slide2 from "@/assets/hero-slide-2.webp";
