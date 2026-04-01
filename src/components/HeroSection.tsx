@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import logoBmn from "@/assets/logo-bmn.png";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const HeroSection = () => {
+  const isMobileOrTablet = useIsMobile();
+
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -15,9 +18,18 @@ const HeroSection = () => {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover hidden lg:block"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover lg:hidden"
+        >
+          <source src="/hero-mobile.mp4" type="video/mp4" />
         </video>
       </div>
 
