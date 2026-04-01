@@ -27,6 +27,8 @@ const desktopSlides = [dSlide1, dSlide2, dSlide3, dSlide4, dSlide5, dSlide6, dSl
 
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
+  const [parallaxY, setParallaxY] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const next = useCallback(() => {
     setCurrent((prev) => (prev + 1) % mobileSlides.length);
@@ -37,12 +39,26 @@ const HeroSection = () => {
     return () => clearInterval(timer);
   }, [next]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        const scrollY = window.scrollY;
+        const sectionHeight = sectionRef.current.offsetHeight;
+        if (scrollY <= sectionHeight) {
+          setParallaxY(scrollY * 0.5);
+        }
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section ref={sectionRef} id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Mobile/Tablet slideshow (hidden on desktop) */}
       <div className="absolute inset-0 lg:hidden">
         {mobileSlides.map((src, i) => (
