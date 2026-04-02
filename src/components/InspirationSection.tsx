@@ -22,7 +22,7 @@ const InspirationSection = () => {
 
   return (
     <>
-      <section id="inspiracao" className="py-14 lg:py-20 bg-background" ref={ref}>
+      <section id="inspiracao" className="py-10 lg:py-14 bg-background" ref={ref}>
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

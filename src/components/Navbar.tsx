@@ -54,7 +54,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between">
         <button onClick={goHome} className="flex flex-col items-start">
           <span className="font-serif text-2xl font-bold tracking-wider text-primary">BMN</span>
-          <span className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground font-sans font-medium -mt-1">
+          <span className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground font-sans font-medium -mt-1 lg:-ml-1">
             Brasil Madeiras Nobre
           </span>
         </button>

@@ -35,7 +35,7 @@ const Forros = () => {
       <div className="h-20" />
       <section className="py-14 lg:py-20">
         <div className="container mx-auto px-4 lg:px-8">
-          <ProductCarousel items={forroSpecies} title="Qual forro dará vida ao seu ambiente?" />
+          <ProductCarousel items={forroSpecies} title="" />
         </div>
       </section>
       <section className="py-14 lg:py-20 bg-card" ref={projetosRef}>
