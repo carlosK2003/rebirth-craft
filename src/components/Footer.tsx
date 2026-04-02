@@ -31,6 +31,7 @@ const Footer = () => {
                 { label: "Início", href: "#inicio" },
                 { label: "Sobre Nós", href: "#sobre" },
                 { label: "Produtos", href: "#produtos" },
+                { label: "Grupo BMN", href: "#segmentacoes" },
                 { label: "Inspiração", href: "#inspiracao" },
                 { label: "Contato", href: "#contato" },
               ].map((link) => (
