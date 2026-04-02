@@ -28,7 +28,7 @@ const pisosMacicos = [
   { name: "Cumaru Champagne", image: macicoCumaruChampagne, desc: "Tonalidade dourada clara com veios suaves. Resistência excepcional e beleza luminosa." },
   { name: "Cumaru Ferro", image: macicoCumaruFerro, desc: "Tom escuro e profundo com densidade superior. Ideal para alto tráfego." },
   { name: "Garapeira", image: macicoGarapeira, desc: "Coloração amarelo-dourada uniforme com excelente durabilidade natural." },
-  { name: "Peroba", image: macicoPeroba, desc: "Coloração quente e variada, fibras entrelaçadas únicas. Tradição em cada tábua." },
+  { name: "Peroba", image: macicoPeroba, desc: "Com fibras entrelaçadas e coloração rica, unindo estética marcante com padrões únicos." },
   { name: "Sucupira", image: macicoSucupira, desc: "Tom marrom-chocolate intenso com veios marcantes. Beleza atemporal." },
   { name: "Tauari", image: macicoTauari, desc: "Tom claro e uniforme, excelente estabilidade dimensional. Ideal para ambientes modernos." },
 ];
