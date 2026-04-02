@@ -33,11 +33,6 @@ const Forros = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="h-20" />
-      <section className="py-14 lg:py-20">
-        <div className="container mx-auto px-4 lg:px-8">
-          <ProductCarousel items={forroSpecies} title="" />
-        </div>
-      </section>
       <section className="py-14 lg:py-20 bg-card" ref={projetosRef}>
         <div className="container mx-auto px-4 lg:px-8 mb-10">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={projetosInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }} className="text-center">
