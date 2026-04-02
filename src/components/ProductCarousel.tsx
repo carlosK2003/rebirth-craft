@@ -31,10 +31,12 @@ export const ProductCarousel = ({ items, title }: { items: CarouselSlide[]; titl
 
   return (
     <div ref={ref}>
-      <motion.div initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }} className="text-center mb-10">
-        <div className="w-12 h-[2px] bg-accent mx-auto mb-6" />
-        <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">{title}</h2>
-      </motion.div>
+      {title && (
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }} className="text-center mb-10">
+          <div className="w-12 h-[2px] bg-accent mx-auto mb-6" />
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">{title}</h2>
+        </motion.div>
+      )}
 
       <div className="max-w-2xl mx-auto relative">
         <button onClick={handlePrev} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-14 w-10 h-10 rounded-full border border-border bg-background flex items-center justify-center hover:border-accent transition-colors z-10" aria-label="Anterior">

@@ -19,8 +19,7 @@ import fp9 from "@/assets/forro-projeto-9.webp";
 import fp10 from "@/assets/forro-projeto-10.webp";
 
 const forroSpecies = [
-  { name: "Tauari", image: forroTauari, desc: "Cor clara e uniforme, conforto térmico e acústico. Ideal para forros internos." },
-  { name: "Cumaru", image: forroCumaru, desc: "Tonalidade dourada quente com veios marcantes. Design sofisticado e acolhedor." },
+  { name: "Tauari", image: forroTauari, desc: "Cor clara e uniforme, conforto térmico e acústico." },
 ];
 
 const projetos = [fp1, fp2, fp3, fp4, fp5, fp6, fp7, fp8, fp9, fp10];
@@ -36,7 +35,7 @@ const Forros = () => {
       <div className="h-20" />
       <section className="py-14 lg:py-20">
         <div className="container mx-auto px-4 lg:px-8">
-          <ProductCarousel items={forroSpecies} title="Qual forro dará vida ao seu ambiente?" />
+          <ProductCarousel items={forroSpecies} title="" />
         </div>
       </section>
       <section className="py-14 lg:py-20 bg-card" ref={projetosRef}>

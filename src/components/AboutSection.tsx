@@ -116,10 +116,7 @@ const AboutSection = () => {
                 className="overflow-hidden"
               >
                 <p className="text-muted-foreground font-sans leading-relaxed mb-6 text-base">
-                  Nossos produtos — Decks, Assoalhos, Forros, Painéis, Escadas e peças S4S — são idealizados para arquitetos, decoradores, projetistas e revendedores que buscam materiais que elevem o projeto a uma obra de arte. Seja em ambientes internos ou externos, cada solução da BMN é pensada para criar espaços que inspiram, acolhem e resistem ao tempo sem perder sua sofisticação natural.
-                </p>
-                <p className="text-muted-foreground font-sans leading-relaxed mb-6 text-base">
-                  Presentes em todo o território nacional, atendemos diretamente os mais exigentes projetos de arquitetura e construção civil em qualquer região do Brasil e fornecemos materiais premium para os principais revendedores do setor, garantindo exclusividade, qualidade e pontualidade em escala nacional.
+                  Nossos produtos — Decks, Assoalhos, Forros, Painéis, Escadas, Portas e Peças S4S — são idealizados para arquitetos, decoradores, projetistas e revendedores que buscam transformar cada ambiente em uma verdadeira obra de arte, unindo estética, durabilidade e sofisticação em soluções que valorizam tanto espaços internos quanto externos com elegância atemporal; presentes em todo o território nacional, atendemos projetos de alto padrão com materiais premium que asseguram exclusividade, excelência e precisão em cada entrega.
                 </p>
               </motion.div>
             )}

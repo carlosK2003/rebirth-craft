@@ -11,7 +11,7 @@ const SegmentationsSection = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <section id="segmentacoes" className="py-24 lg:py-32 bg-card" ref={ref}>
+    <section id="segmentacoes" className="py-14 lg:py-20 bg-card" ref={ref}>
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -60,7 +60,7 @@ const SegmentationsSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="max-w-3xl mx-auto text-center"
+          className="max-w-3xl mx-auto text-center -mt-4"
         >
           <p className="text-muted-foreground font-sans leading-relaxed mb-6">
             No <span className="font-bold" style={{ color: "#BF9540" }}>Grupo BMN</span>, cada etapa é conduzida com precisão. A execução fica sob responsabilidade da <span className="font-bold" style={{ color: "#BF9540" }}>Maderatto Pisos e Revestimentos</span>, especializada em obras e instalações em madeira, garantindo que a matéria-prima nobre seja aplicada com o mesmo nível de excelência com que foi selecionada.
