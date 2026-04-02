@@ -94,7 +94,7 @@ const SegmentationsSection = () => {
                     <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground mb-4">Integração de Alto Padrão</h3>
                     <ul className="space-y-2 text-muted-foreground font-sans text-sm leading-relaxed">
                       <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Curadoria refinada de madeiras pela BMN</li>
-                      <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" /><li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Execução conduzida com rigor técnico pela Maderatto Pisos e Revestimentos</li></li>
+                      <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Execução conduzida com rigor técnico pela Maderatto Pisos e Revestimentos</li>
                       <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Integração plena entre fornecimento e aplicação</li>
                       <li className="flex items-start gap-2"><div className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />Acompanhamento minucioso em todas as fases do projeto</li>
                     </ul>
