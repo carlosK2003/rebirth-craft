@@ -13,6 +13,7 @@ import macicoSucupira from "@/assets/piso-macico-sucupira.webp";
 import macicoTauari from "@/assets/piso-macico-tauari.webp";
 import engCarvalhoPrime from "@/assets/piso-eng-carvalho-prime.webp";
 import engTauariPrime from "@/assets/piso-eng-tauari-prime.webp";
+import engCabreuvaDourada from "@/assets/piso-eng-cabreuva-dourada.webp";
 import projeto1 from "@/assets/piso-projeto-1.webp";
 import projeto2 from "@/assets/piso-projeto-2.webp";
 import projeto3 from "@/assets/piso-projeto-3.webp";
