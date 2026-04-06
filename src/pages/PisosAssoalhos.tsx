@@ -28,16 +28,16 @@ import projeto10 from "@/assets/piso-projeto-10.webp";
 const pisosMacicos = [
   { name: "Cumaru Champagne", image: macicoCumaruChampagne, desc: "Tonalidade dourada clara com veios suaves. Resistência excepcional e beleza luminosa." },
   { name: "Cumaru Ferro", image: macicoCumaruFerro, desc: "Tom escuro e profundo com densidade superior. Ideal para alto tráfego." },
-  { name: "Garapeira", image: macicoGarapeira, desc: "Coloração amarelo-dourada uniforme com excelente durabilidade natural." },
+  { name: "Garapeira", image: macicoGarapeira, desc: "Tonalidade dourada uniforme com veios sutis, unindo leveza visual e durabilidade com elegância." },
   { name: "Peroba", image: macicoPeroba, desc: "Com fibras entrelaçadas e coloração rica, unindo estética marcante com padrões únicos." },
-  { name: "Sucupira", image: macicoSucupira, desc: "Tom marrom-chocolate intenso com veios marcantes. Beleza atemporal." },
-  { name: "Tauari", image: macicoTauari, desc: "Tom claro e uniforme, excelente estabilidade dimensional. Ideal para ambientes modernos." },
+  { name: "Sucupira", image: macicoSucupira, desc: "Tom marrom-chocolate com veios expressivos, trazendo personalidade e requinte aos espaços." },
+  { name: "Tauari", image: macicoTauari, desc: "Tonalidade clara e uniforme com veios suaves, criando ambientes leves, modernos e sofisticados." },
 ];
 
 const pisosEstruturados = [
-  { name: "Carvalho Prime Escovado", image: engCarvalhoPrime, desc: "Elegância europeia com textura escovada que realça os veios naturais." },
-  { name: "Tauari Prime", image: engTauariPrime, desc: "Leveza e sofisticação em base estruturada de alta estabilidade." },
-  { name: "Cabreúva Dourada", image: engCabreuvaDourada, desc: "Cor dourada quente e vibrante, alta estabilidade dimensional e acabamento premium para ambientes sofisticados." },
+  { name: "Carvalho Prime Escovado", image: engCarvalhoPrime, desc: "Elegância americana com textura escovada que realça os veios naturais, unindo elegância clássica e atemporal." },
+  { name: "Tauari Prime", image: engTauariPrime, desc: "Tonalidade clara e uniforme com veios suaves, criando ambientes leves, modernos e sofisticados." },
+  { name: "Cabreúva Dourada", image: engCabreuvaDourada, desc: "Cor dourada quente e delicada, chama atenção pela suavidade e detalhes premium para ambientes sofisticados." },
 ];
 
 const projetos = [projeto1, projeto2, projeto3, projeto4, projeto5, projeto6, projeto7, projeto8, projeto9, projeto10];
