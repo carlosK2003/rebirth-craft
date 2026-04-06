@@ -35,7 +35,7 @@ const pisosMacicos = [
 ];
 
 const pisosEstruturados = [
-  { name: "Carvalho Prime Escovado", image: engCarvalhoPrime, desc: "Elegância americana com textura escovada que realça os veios naturais, unindo elegância clássica e atemporal." },
+  { name: "Carvalho Prime Escovado", image: engCarvalhoPrime, desc: "Elegância americana com textura escovada que realça os veios naturais, unindo harmonia clássica e atemporal." },
   { name: "Tauari Prime", image: engTauariPrime, desc: "Tonalidade clara e uniforme com veios suaves, criando ambientes leves, modernos e sofisticados." },
   { name: "Cabreúva Dourada", image: engCabreuvaDourada, desc: "Cor dourada quente e delicada, chama atenção pela suavidade e detalhes premium para ambientes sofisticados." },
 ];
