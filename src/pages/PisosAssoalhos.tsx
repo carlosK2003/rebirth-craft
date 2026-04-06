@@ -37,6 +37,7 @@ const pisosMacicos = [
 const pisosEstruturados = [
   { name: "Carvalho Prime Escovado", image: engCarvalhoPrime, desc: "Elegância europeia com textura escovada que realça os veios naturais." },
   { name: "Tauari Prime", image: engTauariPrime, desc: "Leveza e sofisticação em base estruturada de alta estabilidade." },
+  { name: "Cabreúva Dourada", image: engCabreuvaDourada, desc: "Cor dourada quente e vibrante, alta estabilidade dimensional e acabamento premium para ambientes sofisticados." },
 ];
 
 const projetos = [projeto1, projeto2, projeto3, projeto4, projeto5, projeto6, projeto7, projeto8, projeto9, projeto10];
