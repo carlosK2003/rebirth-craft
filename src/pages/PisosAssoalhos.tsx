@@ -27,7 +27,7 @@ import projeto10 from "@/assets/piso-projeto-10.webp";
 
 const pisosMacicos = [
   { name: "Cumaru Champagne", image: macicoCumaruChampagne, desc: "Tonalidade dourada clara com veios suaves. Resistência excepcional e beleza luminosa." },
-  { name: "Cumaru Ferro", image: macicoCumaruFerro, desc: "Tom escuro e profundo com densidade superior. Ideal para alto tráfego." },
+  { name: "Cumaru Ferro", image: macicoCumaruFerro, desc: "Tom profundo e alta densidade, ideal para alto tráfego com presença marcante e sofisticação." },
   { name: "Garapeira", image: macicoGarapeira, desc: "Tonalidade dourada uniforme com veios sutis, unindo leveza visual e durabilidade com elegância." },
   { name: "Peroba", image: macicoPeroba, desc: "Com fibras entrelaçadas e coloração rica, unindo estética marcante com padrões únicos." },
   { name: "Sucupira", image: macicoSucupira, desc: "Tom marrom-chocolate com veios expressivos, trazendo personalidade e requinte aos espaços." },
