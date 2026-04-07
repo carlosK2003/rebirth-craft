@@ -24,13 +24,22 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToHash = (hash: string) => {
+    if (hash === "#inicio" || !hash) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const el = document.querySelector(hash);
+      el?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handleClick = (href: string) => {
     setIsOpen(false);
     if (location.pathname === "/") {
-      const el = document.querySelector(href);
-      el?.scrollIntoView({ behavior: "smooth" });
+      scrollToHash(href);
     } else {
-      navigate("/" + href);
+      navigate("/");
+      setTimeout(() => scrollToHash(href), 400);
     }
   };
 
@@ -40,6 +49,7 @@ const Navbar = () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       navigate("/");
+      setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 400);
     }
   };
 
