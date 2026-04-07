@@ -67,16 +67,73 @@ export const ProductCarousel = ({ items, title }: { items: CarouselSlide[]; titl
 };
 
 export const Marquee = ({ images, alt }: { images: string[]; alt: string }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const offsetRef = useRef(0);
+  const isDragging = useRef(false);
+  const dragStartX = useRef(0);
+  const dragStartOffset = useRef(0);
+  const speedPx = 1.2; // px per frame (~60fps → ~72px/s)
+  const halfWidth = useRef(0);
+
+  useLayoutEffect(() => {
+    if (trackRef.current) {
+      halfWidth.current = trackRef.current.scrollWidth / 2;
+    }
+  }, [images]);
+
+  useEffect(() => {
+    let raf: number;
+    const tick = () => {
+      if (!isDragging.current) {
+        offsetRef.current -= speedPx;
+      }
+      if (halfWidth.current > 0 && Math.abs(offsetRef.current) >= halfWidth.current) {
+        offsetRef.current += halfWidth.current;
+      }
+      if (offsetRef.current > 0 && halfWidth.current > 0) {
+        offsetRef.current -= halfWidth.current;
+      }
+      if (trackRef.current) {
+        trackRef.current.style.transform = `translateX(${offsetRef.current}px)`;
+      }
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, []);
+
+  const onPointerDown = (e: React.PointerEvent) => {
+    isDragging.current = true;
+    dragStartX.current = e.clientX;
+    dragStartOffset.current = offsetRef.current;
+    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+  };
+  const onPointerMove = (e: React.PointerEvent) => {
+    if (!isDragging.current) return;
+    offsetRef.current = dragStartOffset.current + (e.clientX - dragStartX.current);
+  };
+  const onPointerUp = () => {
+    isDragging.current = false;
+  };
+
   const doubled = [...images, ...images];
   return (
-    <div className="overflow-hidden">
-      <motion.div className="flex gap-4" animate={{ x: [0, -(images.length * 308)] }} transition={{ duration: 50, repeat: Infinity, ease: "linear" }}>
+    <div
+      ref={containerRef}
+      className="overflow-hidden cursor-grab active:cursor-grabbing select-none"
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerUp}
+      onPointerCancel={onPointerUp}
+    >
+      <div ref={trackRef} className="flex gap-4 will-change-transform" style={{ transform: "translateX(0px)" }}>
         {doubled.map((img, i) => (
           <div key={i} className="flex-shrink-0 w-[300px] h-[200px] rounded-sm overflow-hidden">
-            <img src={img} alt={`${alt} ${(i % images.length) + 1}`} className="w-full h-full object-cover" loading="lazy" />
+            <img src={img} alt={`${alt} ${(i % images.length) + 1}`} className="w-full h-full object-cover pointer-events-none" loading="lazy" draggable={false} />
           </div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };
