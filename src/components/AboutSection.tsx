@@ -93,10 +93,10 @@ const AboutSection = () => {
           </p>
 
           {/* Reveal button */}
-          <div className="text-center mb-6">
+          <div className="text-left mb-6">
             <button
               onClick={() => setExpanded(!expanded)}
-              className="inline-flex items-center gap-2 font-serif text-sm tracking-wide text-accent/80 hover:text-accent transition-colors duration-300 group"
+              className="inline-flex items-center gap-2 text-accent font-sans text-sm font-medium uppercase tracking-wider hover:text-accent/80 transition-colors duration-300 group"
             >
               <span>{expanded ? "Ocultar detalhes" : "Revelar mais sobre a BMN"}</span>
               <ChevronDown
