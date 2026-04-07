@@ -26,6 +26,7 @@ const forroSpecies = [
 const projetos = [fp1, fp2, fp3, fp4, fp5, fp6, fp7, fp8, fp9, fp10];
 
 const Forros = () => {
+  const navigate = useNavigate();
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const projetosRef = useRef(null);
   const projetosInView = useInView(projetosRef, { once: true, margin: "-80px" });
