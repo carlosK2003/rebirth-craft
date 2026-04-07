@@ -18,6 +18,70 @@ const mobileImages = [aboutMobile1, aboutMobile2, aboutMobile3];
 const keywords = ["Nobreza", "Elegância", "Sofisticação", "Requinte", "Durabilidade", "Legado"];
 const keywordsWithPaixao = [...keywords, "Paixão"];
 
+const AboutMarquee = ({ images }: { images: string[] }) => {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const offsetRef = useRef(0);
+  const isDragging = useRef(false);
+  const dragStartX = useRef(0);
+  const dragStartOffset = useRef(0);
+  const halfWidth = useRef(0);
+
+  useLayoutEffect(() => {
+    if (trackRef.current) {
+      halfWidth.current = trackRef.current.scrollWidth / 2;
+    }
+  }, [images]);
+
+  useEffect(() => {
+    let raf: number;
+    const tick = () => {
+      if (!isDragging.current) offsetRef.current -= 0.8;
+      if (halfWidth.current > 0 && Math.abs(offsetRef.current) >= halfWidth.current) offsetRef.current += halfWidth.current;
+      if (offsetRef.current > 0 && halfWidth.current > 0) offsetRef.current -= halfWidth.current;
+      if (trackRef.current) trackRef.current.style.transform = `translateX(${offsetRef.current}px)`;
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, []);
+
+  const onPointerDown = (e: React.PointerEvent) => {
+    isDragging.current = true;
+    dragStartX.current = e.clientX;
+    dragStartOffset.current = offsetRef.current;
+    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+  };
+  const onPointerMove = (e: React.PointerEvent) => {
+    if (!isDragging.current) return;
+    offsetRef.current = dragStartOffset.current + (e.clientX - dragStartX.current);
+  };
+  const onPointerUp = () => { isDragging.current = false; };
+
+  const doubled = [...images, ...images];
+  return (
+    <div
+      className="md:hidden overflow-hidden rounded-sm h-[350px] cursor-grab active:cursor-grabbing select-none"
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerUp}
+      onPointerCancel={onPointerUp}
+    >
+      <div ref={trackRef} className="flex h-full w-max will-change-transform" style={{ transform: "translateX(0px)" }}>
+        {doubled.map((src, i) => (
+          <img
+            key={i}
+            src={src}
+            alt={`Equipe BMN ${(i % images.length) + 1}`}
+            className="h-full w-[280px] object-cover flex-shrink-0"
+            loading="lazy"
+            draggable={false}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
