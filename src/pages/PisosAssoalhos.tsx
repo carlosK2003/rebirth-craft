@@ -44,6 +44,7 @@ const pisosEstruturados = [
 const projetos = [projeto1, projeto2, projeto3, projeto4, projeto5, projeto6, projeto7, projeto8, projeto9, projeto10];
 
 const PisosAssoalhos = () => {
+  const navigate = useNavigate();
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const projetosRef = useRef(null);
   const projetosInView = useInView(projetosRef, { once: true, margin: "-80px" });
