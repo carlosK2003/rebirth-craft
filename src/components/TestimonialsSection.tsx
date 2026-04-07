@@ -3,9 +3,9 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
-  { name: "Ricardo Mendes", role: "Arquiteto, Curitiba", text: "A qualidade das madeiras da BMN é incomparável. O piso de Ipê que instalamos no projeto superou todas as expectativas do cliente. Acabamento perfeito." },
-  { name: "Ana Paula Ferreira", role: "Designer de Interiores", text: "Trabalho com a BMN há anos e a consistência na qualidade é impressionante. O deck de Cumaru que especificamos ficou deslumbrante e resistiu lindamente ao tempo." },
-  { name: "Carlos Eduardo Silva", role: "Proprietário Residencial", text: "Transformamos toda a casa com pisos da BMN. A sensação de caminhar sobre madeira nobre é única. Depois de 5 anos, continua perfeito como no primeiro dia." },
+  { name: "Ana Paula Ferreira", role: "Designer de Interiores", text: "Já fiz diversos projetos em parceria com a BMN e sempre indico aos meus clientes. Desde o primeiro momento eles auxiliam e entregam o prometido, além de que, o resultado final sempre fica impressionante, rendendo diversos elogios." },
+  { name: "Carlos Eduardo Silva", role: "Proprietário Residencial", text: "Conheci a BMN após visitar a casa de um amigo e perguntar quem havia feito o piso de sua casa, me impressionei com a qualidade e brilho. Quis inclusive o mesmo piso de madeira Cumaru na minha casa. Faz 3 anos já e continuo feliz com o resultado e entrega." },
+  { name: "Ricardo Mendes", role: "Arquiteto, Curitiba", text: "A qualidade das madeiras da BMN me surpreendeu. O piso de Ipê que instalamos no projeto superou todas as expectativas do cliente. Acabamento de ótima qualidade." },
 ];
 
 const TestimonialsSection = () => {
