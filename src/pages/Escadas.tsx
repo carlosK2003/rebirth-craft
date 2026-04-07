@@ -20,6 +20,7 @@ import ep10 from "@/assets/escada-10.webp";
 const projetos = [ep1, ep2, ep3, ep4, ep5, ep6, ep7, ep8, ep9, ep10];
 
 const Escadas = () => {
+  const navigate = useNavigate();
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
