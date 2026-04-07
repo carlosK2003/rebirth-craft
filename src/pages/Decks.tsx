@@ -35,6 +35,7 @@ const deckSpecies = [
 const projetos = [dp1, dp2, dp3, dp4, dp5, dp6, dp7, dp8, dp9, dp10];
 
 const Decks = () => {
+  const navigate = useNavigate();
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const projetosRef = useRef(null);
   const projetosInView = useInView(projetosRef, { once: true, margin: "-80px" });
