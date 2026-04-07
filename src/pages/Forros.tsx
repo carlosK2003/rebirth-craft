@@ -49,7 +49,7 @@ const Forros = () => {
       </section>
       <section className="py-14 lg:py-20">
         <div className="container mx-auto px-4 text-center">
-          <a href="/#produtos" className="px-8 py-4 bg-accent text-accent-foreground font-sans font-semibold text-sm uppercase tracking-widest hover:bg-gold-light transition-all duration-300 rounded-sm inline-block">VOLTAR AO CATÁLOGO</a>
+          <button onClick={() => { navigate('/'); setTimeout(() => { document.getElementById('produtos')?.scrollIntoView({ behavior: 'smooth' }); }, 300); }} className="px-8 py-4 bg-accent text-accent-foreground font-sans font-semibold text-sm uppercase tracking-widest hover:bg-gold-light transition-all duration-300 rounded-sm inline-block">VOLTAR AO CATÁLOGO</button>
         </div>
       </section>
       <Footer />
