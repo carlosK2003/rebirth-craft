@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -43,6 +44,7 @@ const pisosEstruturados = [
 const projetos = [projeto1, projeto2, projeto3, projeto4, projeto5, projeto6, projeto7, projeto8, projeto9, projeto10];
 
 const PisosAssoalhos = () => {
+  const navigate = useNavigate();
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const projetosRef = useRef(null);
   const projetosInView = useInView(projetosRef, { once: true, margin: "-80px" });
@@ -75,7 +77,7 @@ const PisosAssoalhos = () => {
       </section>
       <section className="py-14 lg:py-20 bg-card">
         <div className="container mx-auto px-4 text-center">
-          <a href="/#produtos" className="px-8 py-4 bg-accent text-accent-foreground font-sans font-semibold text-sm uppercase tracking-widest hover:bg-gold-light transition-all duration-300 rounded-sm inline-block">VOLTAR AO CATÁLOGO</a>
+          <button onClick={() => { navigate('/'); setTimeout(() => { document.getElementById('produtos')?.scrollIntoView({ behavior: 'smooth' }); }, 300); }} className="px-8 py-4 bg-accent text-accent-foreground font-sans font-semibold text-sm uppercase tracking-widest hover:bg-gold-light transition-all duration-300 rounded-sm inline-block">VOLTAR AO CATÁLOGO</button>
         </div>
       </section>
       <Footer />
