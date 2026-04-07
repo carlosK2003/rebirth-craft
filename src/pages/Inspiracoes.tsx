@@ -69,6 +69,7 @@ const InspSection = ({ title, subtitle, images, index }: { title: string; subtit
 };
 
 const Inspiracoes = () => {
+  const navigate = useNavigate();
   useEffect(() => { window.scrollTo(0, 0); }, []);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
