@@ -64,19 +64,7 @@ const AboutSection = () => {
             className="hidden md:block w-full h-[400px] lg:h-[500px] object-cover rounded-sm"
             loading="lazy"
           />
-          <div className="md:hidden overflow-hidden rounded-sm h-[350px]">
-            <div className="flex animate-marquee-about h-full w-max">
-              {[...mobileImages, ...mobileImages].map((src, i) => (
-                <img
-                  key={i}
-                  src={src}
-                  alt={`Equipe BMN ${(i % 3) + 1}`}
-                  className="h-full w-[280px] object-cover flex-shrink-0"
-                  loading="lazy"
-                />
-              ))}
-            </div>
-          </div>
+          <AboutMarquee images={mobileImages} />
         </motion.div>
 
         <motion.div
