@@ -1,5 +1,5 @@
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect, useLayoutEffect, useCallback } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import aboutImg from "@/assets/about-wood.webp";
 import aboutMobile1 from "@/assets/about-mobile-1.webp";
