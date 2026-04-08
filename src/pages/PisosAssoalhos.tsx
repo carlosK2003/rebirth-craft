@@ -74,7 +74,8 @@ const PisosAssoalhos = () => {
               }}
               className="px-8 py-4 bg-accent text-accent-foreground font-sans font-semibold text-sm uppercase tracking-widest hover:bg-gold-light transition-all duration-300 rounded-sm"
             >
-              BAIXAR - EXPLICAÇÃO ESTRUTURADO BMN
+              <span className="hidden md:inline">BAIXAR - EXPLICAÇÃO PISO ESTRUTURADO BMN</span>
+              <span className="md:hidden">ACESSAR - EXPLICAÇÃO PISO ESTRUTURADO BMN</span>
             </button>
           </div>
         </div>
