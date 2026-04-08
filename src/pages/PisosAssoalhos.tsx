@@ -61,6 +61,22 @@ const PisosAssoalhos = () => {
       <section className="py-14 lg:py-20 bg-card">
         <div className="container mx-auto px-4 lg:px-8">
           <ProductCarousel items={pisosEstruturados} title="Pisos Estruturados" />
+          <div className="flex justify-center mt-10">
+            <button
+              onClick={() => {
+                const isMobile = window.innerWidth < 768;
+                const link = document.createElement('a');
+                link.href = isMobile ? '/downloads/pisos-estruturados-mobile.pdf' : '/downloads/pisos-estruturados-desktop.pdf';
+                link.download = 'Explicacao-Estruturado-BMN.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+              className="px-8 py-4 bg-accent text-accent-foreground font-sans font-semibold text-sm uppercase tracking-widest hover:bg-gold-light transition-all duration-300 rounded-sm"
+            >
+              BAIXAR - EXPLICAÇÃO ESTRUTURADO BMN
+            </button>
+          </div>
         </div>
       </section>
       <section className="py-14 lg:py-20" ref={projetosRef}>
