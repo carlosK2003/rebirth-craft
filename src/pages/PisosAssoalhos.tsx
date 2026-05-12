@@ -15,6 +15,8 @@ import macicoTauari from "@/assets/piso-macico-tauari.webp";
 import engCarvalhoPrime from "@/assets/piso-eng-carvalho-prime.webp";
 import engTauariPrime from "@/assets/piso-eng-tauari-prime.webp";
 import engCabreuvaDourada from "@/assets/piso-eng-cabreuva-dourada.webp";
+import engTauariCapri from "@/assets/piso-eng-tauari-capri.webp";
+import engTauariCenere from "@/assets/piso-eng-tauari-cenere.webp";
 import projeto1 from "@/assets/piso-projeto-1.webp";
 import projeto2 from "@/assets/piso-projeto-2.webp";
 import projeto3 from "@/assets/piso-projeto-3.webp";
@@ -39,6 +41,8 @@ const pisosEstruturados = [
   { name: "Carvalho Prime Escovado", image: engCarvalhoPrime, desc: "Elegância americana com textura escovada que realça os veios naturais, unindo harmonia clássica e atemporal." },
   { name: "Tauari Prime", image: engTauariPrime, desc: "Tonalidade clara e uniforme com veios suaves, criando ambientes leves, modernos e sofisticados." },
   { name: "Cabreúva Dourada", image: engCabreuvaDourada, desc: "Cor dourada quente e delicada, chama atenção pela suavidade e detalhes premium para ambientes sofisticados." },
+  { name: "Tauari Capri", image: engTauariCapri, desc: "Tom amadeirado quente e equilibrado, com veios marcantes que conferem aconchego e sofisticação atemporal aos ambientes." },
+  { name: "Tauari Cenere", image: engTauariCenere, desc: "Tonalidade clara acinzentada com veios delicados, ideal para projetos contemporâneos que valorizam leveza e minimalismo refinado." },
 ];
 
 const projetos = [projeto1, projeto2, projeto3, projeto4, projeto5, projeto6, projeto7, projeto8, projeto9, projeto10];
